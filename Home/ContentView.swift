@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+// MARK: Stored properties
+let firstGradientColours = Gradient(colors: [Color.blue, Color.yellow])
+
+// MARK: Computed properties
 struct ContentView: View {
     var body: some View {
         ZStack {
