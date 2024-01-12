@@ -7,19 +7,20 @@
 
 import SwiftUI
 
-// MARK: Stored properties
-let firstGradientColours = Gradient(colors: [Color.blue, Color.yellow])
-
-// MARK: Computed properties
 struct ContentView: View {
+    
+    // MARK: Stored properties
+    let firstGradientColours = Gradient(colors: [Color.blue, Color.darkPurple, Color.yellow])
+    
+    // MARK: Computed properties
     var body: some View {
         ZStack {
             
             // Background
             LinearGradient(
-                gradient: Gradient(colors: [Color.red, Color.blue]),
-                startPoint: .leading,
-                endPoint: .trailing
+                gradient: firstGradientColours,
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
             )
             .ignoresSafeArea()
             
