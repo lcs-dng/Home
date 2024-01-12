@@ -10,23 +10,34 @@ import SwiftUI
 struct ContentView: View {
     
     // MARK: Stored properties
-    let firstGradientColours = Gradient(colors: [.white, .blue])
+    let firstGradientColours = Gradient(colors: [.white, .blue, .darkPurple, .clear])
+    let secondGradientColours = Gradient(colors: [.yellow, .darkPurple, .clear])
     
     // MARK: Computed properties
     var body: some View {
         ZStack {
             
             // Background
-            Color.orange
+            Color.black
                 .ignoresSafeArea()
             
             // First gradient
             RadialGradient(
                 gradient: firstGradientColours,
-                center: .center,
-                startRadius: 100,
-                endRadius: 300
+                center: .topLeading,
+                startRadius: 0,
+                endRadius: 750
             )
+            .ignoresSafeArea()
+            
+            // Second gradient
+            RadialGradient(
+                gradient: secondGradientColours,
+                center: UnitPoint(x: 1.3, y: 1),
+                startRadius: 0,
+                endRadius: 1250
+            )
+            .ignoresSafeArea()
             
             // Foreground
             VStack {
